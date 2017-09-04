@@ -4,21 +4,41 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
 	<title>Train Schedule</title>
-	<!-- Latest compiled and minified CSS -->
+	<!-- jquery -->
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.js"
+	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	  crossorigin="anonymous"></script>
+
+  	<!-- Latest compiled and minified bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+	<!-- Optional theme -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+	<!-- Latest compiled and minified Bootstrap JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- moment.js -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<script type="text/javascript" src = 'assets/javascript/app.js'></script>
 </head>
 
 <body>
-	<main class = "container">
+	<main>
 		<div class="jumbotron">
 		  <h1>I hear that train a'comin'...</h1>
 		  <p>I called the doctor, and the doctor said, "More Jumbotron!"</p>
-
 		</div>
+
 		<div class = "panel panel-info">	
 			<div class = "panel-heading">Train Schedule</div>
 			<div class = "panel-body">
@@ -31,21 +51,6 @@
 							<th>Next Arrival</th>
 							<th>Minutes Away</th>
 						</tr>
-						<tr>
-							<td>Name</td>
-							<td>Destnation</td>
-							<td>Frequency (minutes)</td>
-							<td>Next Arrival</td>
-							<td>Minutes Away</td>
-						</tr>
-						<tr>
-							<td>Train Name</td>
-							<td>Destnation</td>
-							<td>Frequency (minutes)</td>
-							<td>Next Arrival</td>
-							<td>Minutes Away</td>
-						</tr>
-
 					</table>
 				</div>	
 			</div>
@@ -56,32 +61,18 @@
 			<div class = "panel-body">
 
 				<label>Train Name</label>
-				<input type="text" class = "form-control" name="name">
+				<input type="text" class = "form-control" id ="name">
 				<label>Destination</label>
-				<input type="text" class = "form-control" name="destination">
+				<input type="text" class = "form-control" id ="destination">
 				<label>First Train Time (hh:mm, military time)</label>
-				<input type="text" class = "form-control" name="first-train">
+				<input type="text" class = "form-control" id ="first-train">
 				<label>Frequency</label>
-				<input type="text" class = "form-control" name="frequency">
+				<input type="text" class = "form-control" id= "frequency">
 				<br />
-				<button type = "submit" class = "btn btn-primary btn-lg" value = "Submit">Submit</button>
+				<!-- <input type = "submit" id = "submit-btn" class = "btn btn-primary btn-lg"> -->
+				<button id = "submit-btn" class = "btn btn-primary btn-lg">Submit</button>
 			</div>
 		</div>	
-
-
-		
-
-
-
 	</main>
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-	<!-- JQuery -->
-	<script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-	
-	<script type="text/javascript" src = 'assets/javascript/app.js'></script>
-
 </body>
 </html>
